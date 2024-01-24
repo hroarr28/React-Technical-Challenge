@@ -4,8 +4,8 @@ import { GraphContext } from "../../Context/context";
 const useMinimalSpend = () => {
   const { value, setValue } = useContext(GraphContext);
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
+  const handleChange = (values) => {
+    setValue(values);
   };
   return { value, handleChange };
 };

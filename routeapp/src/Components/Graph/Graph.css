@@ -2,10 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
-.table-center {
+.table-center-graph {
     display:flex;
     justify-content: center;
     width: 80%;
+    background-color: #354F52;
+    border: 1px solid #84A98C;
+    border-radius: 10px;
 }

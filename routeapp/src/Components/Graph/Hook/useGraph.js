@@ -104,13 +104,19 @@ const useGraph = () => {
     });
     setUsersPerMonth(newUsersPerMonth);
 
-    const cumulativeCost = Object.values(newUsersPerMonth).reduce(
-      (acc, current) => {
-        const lastValue = acc.length > 0 ? acc[acc.length - 1] : 0;
-        return [...acc, lastValue + current * 5];
-      },
-      []
-    );
+    const calculateCumulativeCost = (usersPerMonth) => {
+      let cumulativeCost = [];
+      let lastValue = 0;
+
+      for (const users of Object.values(usersPerMonth)) {
+        lastValue += users * 5;
+        cumulativeCost.push(lastValue);
+      }
+
+      return cumulativeCost;
+    };
+
+    const cumulativeCost = calculateCumulativeCost(newUsersPerMonth);
 
     if (JSON.stringify(cumulativeCost) !== JSON.stringify(totalCostPerMonth)) {
       setTotalCostPerMonth(cumulativeCost);
@@ -140,16 +146,16 @@ const useGraph = () => {
       {
         label: "Users Birthdays Per Month",
         data: monthlyData,
-        borderColor: "rgba(75, 192, 192, 1)",
-        backgroundColor: "rgba(75, 192, 192, 0.5)",
+        borderColor: "#00CED1",
+        backgroundColor: "#00CED1",
         borderWidth: 3,
         fill: false,
       },
       {
         label: "Cumulative Cost To Give $5 Voucher",
         data: totalCostPerMonth,
-        borderColor: "rgba(153, 102, 255, 1)",
-        backgroundColor: "rgba(153, 102, 255, 0.5)",
+        borderColor: "#FF7F50",
+        backgroundColor: "#FF7F50",
         borderWidth: 3,
         fill: false,
       },
@@ -161,10 +167,14 @@ const useGraph = () => {
     plugins: {
       title: {
         display: true,
-        text: "User Data Analysis",
+        text: "Coupon Data",
+        color: "#CAD2C5",
       },
       legend: {
         display: true,
+        labels: {
+          color: "#CAD2C5",
+        },
       },
     },
     scales: {
@@ -173,12 +183,28 @@ const useGraph = () => {
         title: {
           display: true,
           text: "Count / Cumulative Cost ($)",
+          color: "#CAD2C5",
+        },
+        ticks: {
+          color: "#CAD2C5",
+        },
+        grid: {
+          display: true,
+          color: "#52796F",
         },
       },
       x: {
         title: {
           display: true,
           text: "Month",
+          color: "#CAD2C5",
+        },
+        ticks: {
+          color: "#CAD2C5",
+        },
+        grid: {
+          display: true,
+          color: "#52796F",
         },
       },
     },

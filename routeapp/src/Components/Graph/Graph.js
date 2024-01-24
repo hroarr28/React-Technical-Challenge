@@ -7,7 +7,7 @@ const Graph = () => {
   const { chartData, options } = useGraph();
   return (
     <div className="chart-container">
-      <div className="table-center">
+      <div className="table-center-graph">
         <Line data={chartData} options={options} />
       </div>
     </div>

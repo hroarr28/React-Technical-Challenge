@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const GraphContext = createContext("");
 
 export const GraphProvider = ({ children }) => {
-  const [value, setValue] = useState(2500);
+  const [value, setValue] = useState([2500]);
   const [gender, setGender] = useState("all");
   const [region, setRegion] = useState("Select Region");
   const [usersPerMonth, setUsersPerMonth] = useState({

@@ -7,8 +7,8 @@ const Table = () => {
     useTable();
   return (
     <div className="table-wrapper">
-      <div className="table-center">
-        <table {...getTableProps()}>
+      <div className="table-center-table">
+        <table className="table-color" {...getTableProps()}>
           <thead>
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>

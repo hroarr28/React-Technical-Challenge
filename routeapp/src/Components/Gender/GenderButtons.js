@@ -1,15 +1,37 @@
-import React, { useContext } from "react";
-import { GraphContext } from "../Context/context";
+import React, { useContext, useState } from "react";
+import useGenderButtons from "./Hook/useGenderButtons";
 import "./GenderButtons.css";
 
 const GenderButtons = () => {
-  const { gender, setGender } = useContext(GraphContext);
+  const {
+    handleAllClick,
+    handleFemaleClick,
+    handleMaleClick,
+    maleClicked,
+    femaleClicked,
+    allClicked,
+  } = useGenderButtons();
 
   return (
     <div className="gender-buttons">
-      <button onClick={() => setGender("male")}>Male</button>
-      <button onClick={() => setGender("female")}>Female</button>
-      <button onClick={() => setGender("all")}>All</button>
+      <button
+        className={maleClicked ? "button-style-clicked" : "button-style"}
+        onClick={() => handleMaleClick()}
+      >
+        Male
+      </button>
+      <button
+        className={femaleClicked ? "button-style-clicked" : "button-style"}
+        onClick={() => handleFemaleClick()}
+      >
+        Female
+      </button>
+      <button
+        className={allClicked ? "button-style-clicked" : "button-style"}
+        onClick={() => handleAllClick()}
+      >
+        All
+      </button>
     </div>
   );
 };

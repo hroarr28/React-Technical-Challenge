@@ -1,6 +1,11 @@
+.display-tools-container {
+    display: flex
+}
+
 .display-tools {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    margin: 1rem 0;
 }

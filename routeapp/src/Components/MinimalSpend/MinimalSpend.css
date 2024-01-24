@@ -1,0 +1,19 @@
+/* .minimal-spend-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+} */
+
+.spend-container {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -93,6 +93,8 @@ I would add the user data into a SQL data like postgresql and use axios or somet
 
 If the product were to get a lot more complex I would consider moving from context to something like Redux.
 
+Add a key to the graph to explain that the Filters remove the selected option from the chart.
+
 # What is wrong with this statement this.setState({count:this.state.count+1})?
 
 The state is being manipulated by adding on 1 and is relying on the previous state, it is not guaranteed to be the same state as when the setState was called. So it is better to use the function form of setState when you are updating state based on previous state. this.setState((prevState)=>{return {count:prevState.count+1}}) this will ensure the +1 is added onto the most recent number

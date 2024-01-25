@@ -89,7 +89,7 @@ In the future I would like to make the project responsive to allow use on a mobi
 
 Testing would be added to insure the product is working correctly. I created Hooks in the project to allow tests to be written easily.
 
-I would add the user data into a SQL data like postgresql and use axios or something simular to access the data.
+I would add the user data into a SQL data like postgresql and use axios or something similar to access the data.
 
 If the product were to get a lot more complex I would consider moving from context to something like Redux.
 

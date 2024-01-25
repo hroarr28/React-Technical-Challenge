@@ -69,9 +69,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-What is wrong with this statement this.setState({count:this.state.count+1})?
+<u>React-Technical-Challenge</u>
 
-The state is being manipulated and is relying on the previous state and it is not guaranteed to be the same state as when the setState was called. So it is better to use the function form of setState when you are updating state based on previous state. this.setState((prevState)=>{return {count:prevState.count+1}})
+The task was to create a single page application that allows the user to see the cumulative cost of giving a $5 coupon to the users on their birthday.
 
-What is redux and how does it work?
+The chart is a Line graph that shows the number of users with birthdays in each month and the cumulative price of giving a $5 voucher to each of these users.
+
+The chart can be filteres to remove users. It can be filtered to remove users who have less than the minimum spend selected. It can be filtered to show only Male, Female or All and can be filered by region.
+
+Below the chart a table is displayed with the same information in a readabale format.
+
+<u>Technologies used</u>
+
+React was used to build this project to allow for the data to be updated in real time.
+
+<u>Features for the future</u>
+
+In the future I would like to make the project responsive to allow use on a mobile device or to create a react-native app to allow this.
+
+Testing would be added to insure the product is working correctly. I created Hooks in the project to allow tests to be written easily.
+
+I would add the user data into a SQL data like postgresql and use axios or something simular to access the data.
+
+If the product were to get a lot more complex I would consider moving from context to something like Redux.
+
+<u>What is wrong with this statement this.setState({count:this.state.count+1})?</u>
+
+The state is being manipulated by adding on 1 and is relying on the previous state, it is not guaranteed to be the same state as when the setState was called. So it is better to use the function form of setState when you are updating state based on previous state. this.setState((prevState)=>{return {count:prevState.count+1}}) this will ensure the +1 is added onto the most recent number
+
+<u>What is redux and how does it work?</U>
+
 Redux is a state management tool that provides a centralized place to store different data in states and helps avoid passing states through multiple components. Redux is better for large applications and has optimizations to avoid the app re rendering. Redux is good at handling asyncronous logic (effects that happen in the background while the rest of the app is running)

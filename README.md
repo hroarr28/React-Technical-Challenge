@@ -93,7 +93,7 @@ I would add the user data into a SQL data like postgresql and use axios or somet
 
 If the product were to get a lot more complex I would consider moving from context to something like Redux.
 
-Add a key to the graph to explain that the Filters remove the selected option from the chart.
+Add a key to the graph to explain the filters in more detail 
 
 # What is wrong with this statement this.setState({count:this.state.count+1})?
 

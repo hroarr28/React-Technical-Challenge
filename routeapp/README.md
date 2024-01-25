@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+What is wrong with this statement this.setState({count:this.state.count+1})?
+
+The state is being manipulated and is relying on the previous state and it is not guaranteed to be the same state as when the setState was called. So it is better to use the function form of setState when you are updating state based on previous state. this.setState((prevState)=>{return {count:prevState.count+1}})
+
+What is redux and how does it work?
+Redux is a state management tool that provides a centralized place to store different data in states and helps avoid passing states through multiple components. Redux is better for large applications and has optimizations to avoid the app re rendering. Redux is good at handling asyncronous logic (effects that happen in the background while the rest of the app is running)

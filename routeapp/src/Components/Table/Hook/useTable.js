@@ -7,8 +7,9 @@ const useTable = () => {
 
   const combinedData = useMemo(() => {
     return Object.entries(usersPerMonth).map(([month, count], index) => {
-      const cost = totalCostPerMonth[index];
-      return { month, count, cost };
+      const totalCost = totalCostPerMonth[index];
+      const cost = count * 5;
+      return { month, count, totalCost, cost };
     });
   }, [usersPerMonth, totalCostPerMonth]);
 
@@ -23,8 +24,12 @@ const useTable = () => {
         accessor: "count",
       },
       {
-        Header: "Cumulative Cost",
+        Header: "Cost",
         accessor: "cost",
+      },
+      {
+        Header: "Cumulative Cost",
+        accessor: "totalCost",
       },
     ],
     []

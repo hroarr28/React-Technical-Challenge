@@ -33,8 +33,6 @@ const useGraph = () => {
     totalCostPerMonth,
   } = useContext(GraphContext);
 
-  console.log(usersPerMonth);
-
   useEffect(() => {
     const newUsersPerMonth = {
       Jan: 0,
@@ -122,8 +120,6 @@ const useGraph = () => {
       setTotalCostPerMonth(cumulativeCost);
     }
   }, [value, gender, region, totalCostPerMonth]);
-
-  console.log(totalCostPerMonth);
 
   const monthlyData = Object.values(usersPerMonth);
 

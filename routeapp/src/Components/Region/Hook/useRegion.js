@@ -6,8 +6,6 @@ const useRegion = () => {
   const { region, setRegion } = useContext(GraphContext);
   const [uniqueRegions, setUniqueRegions] = useState([" Select Region"]);
 
-  console.log(region);
-
   useEffect(() => {
     const findUniqueRegions = [];
     users.forEach((user) => {

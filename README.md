@@ -75,7 +75,7 @@ The task was to create a single page application that allows the user to see the
 
 The chart is a Line graph that shows the number of users with birthdays in each month and the cumulative price of giving a $5 voucher to each of these users.
 
-The chart can be filteres to remove users. It can be filtered to remove users who have less than the minimum spend selected. It can be filtered to show only Male, Female or All and can be filered by region.
+The chart can be filtered to remove users from it. It can be filtered to remove users who have less than the minimum spend selected. It can be filtered to show only Male, Female or All and can be filtered by region.
 
 Below the chart a table is displayed with the same information in a readabale format.
 

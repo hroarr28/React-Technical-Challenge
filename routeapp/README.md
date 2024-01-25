@@ -95,7 +95,7 @@ If the product were to get a lot more complex I would consider moving from conte
 
 <u>What is wrong with this statement this.setState({count:this.state.count+1})?</u>
 
-The state is being manipulated by adding on 1 and is relying on the previous state, it is not guaranteed to be the same state as when the setState was called. So it is better to use the function form of setState when you are updating state based on previous state. this.setState((prevState)=>{return {count:prevState.count+1}}) this will ensure the +1 is added onto the most recent number
+The state is being manipulated by adding on 1 and is relying on the previous state, because of this its better to use prevState to set state to make sure the state has been re rendered. So it is better to use this. this.setState((prevState)=>{return {count:prevState.count+1}}) this will ensure the +1 is added onto the most recent number
 
 <u>What is redux and how does it work?</U>
 

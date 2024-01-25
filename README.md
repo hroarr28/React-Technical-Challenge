@@ -58,7 +58,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 npm run build fails to minify
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-<u>React-Technical-Challenge</u>
+# React-Technical-Challenge
 
 The task was to create a single page application that allows the user to see the cumulative cost of giving a $5 coupon to the users on their birthday.
 
@@ -68,11 +68,11 @@ The chart can be filteres to remove users. It can be filtered to remove users wh
 
 Below the chart a table is displayed with the same information in a readabale format.
 
-<u>Technologies used</u>
+# Technologies used
 
 React was used to build this project to allow for the data to be updated in real time.
 
-<u>Features for the future</u>
+# Features for the future
 
 In the future I would like to make the project responsive to allow use on a mobile device or to create a react-native app to allow this.
 
@@ -82,10 +82,10 @@ I would add the user data into a SQL data like postgresql and use axios or somet
 
 If the product were to get a lot more complex I would consider moving from context to something like Redux.
 
-<u>What is wrong with this statement this.setState({count:this.state.count+1})?</u>
+# What is wrong with this statement this.setState({count:this.state.count+1})?
 
 The state is being manipulated by adding on 1 and is relying on the previous state, it is not guaranteed to be the same state as when the setState was called. So it is better to use the function form of setState when you are updating state based on previous state. this.setState((prevState)=>{return {count:prevState.count+1}}) this will ensure the +1 is added onto the most recent number
 
-<u>What is redux and how does it work?</u>
+# What is redux and how does it work?
 
 Redux is a state management tool that provides a centralized place to store different data in states and helps avoid passing states through multiple components. Redux is better for large applications and has optimizations to avoid the app re rendering. Redux is good at handling asyncronous logic (effects that happen in the background while the rest of the app is running)
